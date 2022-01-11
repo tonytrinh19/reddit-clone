@@ -1,0 +1,44 @@
+{
+  "name": "fullstack-proj",
+  "version": "1.0.0",
+  "description": "A reddit clone by Tony Trinh, using GraphQl, Typescript",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js",
+    "start2": "ts-node src/index.ts",
+    "dev2": "nodemon --exec ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonytrinh19/reddit-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonytrinh19/reddit-clone/issues"
+  },
+  "homepage": "https://github.com/tonytrinh19/reddit-clone#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "ts-node": "^10.4.0",
+    "tsconfig.json": "^1.0.10",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@mikro-orm/cli": "^4.5.10",
+    "@mikro-orm/core": "^4.5.10",
+    "@mikro-orm/migrations": "^4.5.10",
+    "@mikro-orm/postgresql": "^4.5.10",
+    "pg": "^8.7.1"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  }
+}
