@@ -2,12 +2,15 @@ import { __prod__ } from "./constants";
 import { Post } from "./entities/Post";
 import { MikroORM } from "@mikro-orm/core";
 import path from "path";
+import dotenv from "dotenv";
+dotenv.config();
 
 export default {
   migrations: {
     path: path.join(__dirname, "./migrations"),
     pattern: /^[\w-]+\d+\.[tj]s$/,
   },
+  password: process.env.DB_PASS,
   entities: [Post],
   dbName: "reddit-clone",
   type: "postgresql",
