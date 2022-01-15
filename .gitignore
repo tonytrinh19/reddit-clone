@@ -3,3 +3,4 @@ package-lock.json
 constants.ts
 dist/
 .env
+*.key
